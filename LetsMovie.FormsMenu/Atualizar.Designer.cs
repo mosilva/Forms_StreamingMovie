@@ -33,6 +33,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnSobre = new System.Windows.Forms.Button();
             this.txtTitulo = new System.Windows.Forms.Label();
+            this.btnList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picFilmes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(548, 55);
+            this.btnVoltar.Location = new System.Drawing.Point(553, 55);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 11;
@@ -59,7 +60,7 @@
             // btnSobre
             // 
             this.btnSobre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSobre.Location = new System.Drawing.Point(323, 59);
+            this.btnSobre.Location = new System.Drawing.Point(341, 55);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(75, 23);
             this.btnSobre.TabIndex = 10;
@@ -77,11 +78,23 @@
             this.txtTitulo.TabIndex = 9;
             this.txtTitulo.Text = "ATUALIZAR";
             // 
+            // btnList
+            // 
+            this.btnList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnList.Location = new System.Drawing.Point(416, 101);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(127, 23);
+            this.btnList.TabIndex = 19;
+            this.btnList.Text = "Aparecer Lista";
+            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            // 
             // frmAtualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 450);
+            this.Controls.Add(this.btnList);
             this.Controls.Add(this.picFilmes);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSobre);
@@ -102,5 +115,6 @@
         private Button btnVoltar;
         private Button btnSobre;
         private Label txtTitulo;
+        private Button btnList;
     }
 }
