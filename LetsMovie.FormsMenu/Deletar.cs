@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using LetsMovie.FormsDomain;
 
 namespace LetsMovie.FormsMenu
 {
@@ -36,39 +37,32 @@ namespace LetsMovie.FormsMenu
 
         private void frmDeletar_Load(object sender, EventArgs e)
         {
-            ListBox listaFilmes = new ListBox();
-            List<Movies> listMovies = new List<Movies>();
-            listMovies.Add(new Movies(1, "O Exorcista", "Terror", "1974-06-29"));
-            listMovies.Add(new Movies(2, "Um Dia", "Romance", "2011-10-14"));
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnList_Click(object sender, EventArgs e)
         {
             ListBox listaFilmes = new ListBox();
-            listaFilmes.Size = new System.Drawing.Size(200, 100);
-            listaFilmes.Location = new System.Drawing.Point(370, 200);
+            listaFilmes.Size = new System.Drawing.Size(250, 200);
+            listaFilmes.Location = new System.Drawing.Point(340, 160);
+
+            foreach (var movie in MovieCollections.ListCatalogMovies) 
+            {
+                listaFilmes.Items.Add(movie.Title.ToString());
+            }
+
             this.Controls.Add(listaFilmes);
 
-            listaFilmes.Items.Add("O Mágico de Oz");
-            listaFilmes.Items.Add("V de Vingança");
-            listaFilmes.Items.Add("Diário de uma Paixão");
-            listaFilmes.Items.Add("Shrek");
-            listaFilmes.Items.Add("Encantado");
-
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
             {
                 Debug.WriteLine(i);
             }
 
-            //List<Movies> listMovies = new List<Movies>();
-            //listMovies.Add(new Movies(1, "O Exorcista", "Terror", "1974-06-29"));
-            //listMovies.Add(new Movies(2, "Um Dia", "Romance", "2011-10-14"));
-            //listaFilmes.DataSource = listMovies;
         }
     }
 }

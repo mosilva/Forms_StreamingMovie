@@ -1,13 +1,14 @@
-﻿using System;
+﻿using LetsMovie.FormsDomain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace LetsMovie.FormsMenu
 {
@@ -18,44 +19,72 @@ namespace LetsMovie.FormsMenu
             InitializeComponent();
         }
 
-        private void btnSobre_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmSobre sobre = new frmSobre();
-            sobre.ShowDialog();
-            this.Visible = true;
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmMenu telaInicial = new frmMenu();
-            telaInicial.ShowDialog();
-            this.Visible = true;
-        }
-
-        private void frmBuscar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnList_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             ListBox listaFilmes = new ListBox();
-            listaFilmes.Size = new System.Drawing.Size(200, 100);
-            listaFilmes.Location = new System.Drawing.Point(370, 200);
+            listaFilmes.Size = new System.Drawing.Size(250, 200);
+            listaFilmes.Location = new System.Drawing.Point(340, 160);
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Action, out List<Movies>? ListAction);
+
+            foreach (var movie in ListAction)
+            {
+                listaFilmes.Items.Add(movie.Title.ToString());
+            }
+
             this.Controls.Add(listaFilmes);
 
-            listaFilmes.Items.Add("O Mágico de Oz");
-            listaFilmes.Items.Add("V de Vingança");
-            listaFilmes.Items.Add("Diário de uma Paixão");
-            listaFilmes.Items.Add("Shrek");
-            listaFilmes.Items.Add("Encantado");
-
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
             {
                 Debug.WriteLine(i);
             }
+        }
+
+        private void BtnSearchAdventure_Click(object sender, EventArgs e)
+        {
+
+            ListBox listaFilmes = new ListBox();
+            listaFilmes.Size = new System.Drawing.Size(250, 200);
+            listaFilmes.Location = new System.Drawing.Point(340, 160);
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Adventure, out List<Movies>? ListAdventure);
+           
+            foreach (var movie in ListAdventure)
+            {
+                listaFilmes.Items.Add(movie.Title.ToString());
+            }
+
+            this.Controls.Add(listaFilmes);
+
+            for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
+            {
+                Debug.WriteLine(i);
+            }
+
+
+        }
+
+        private void BtnSearchHeroes_Click(object sender, EventArgs e)
+        {
+
+            ListBox listaFilmes = new ListBox();
+            listaFilmes.Size = new System.Drawing.Size(250, 200);
+            listaFilmes.Location = new System.Drawing.Point(340, 160);
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Heroes, out List<Movies>? ListHeroes);
+
+            foreach (var movie in ListHeroes)
+            {
+                listaFilmes.Items.Add(movie.Title.ToString());
+            }
+
+            this.Controls.Add(listaFilmes);
+
+            for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
+            {
+                Debug.WriteLine(i);
+            }
+
         }
     }
 }
