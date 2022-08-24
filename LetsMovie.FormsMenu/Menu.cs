@@ -15,7 +15,7 @@ namespace LetsMovie.FormsMenu
             };
         }
 
-        public static bool CloseCancel()
+        private static bool CloseCancel()
         {
             const string message = "Quer mesmo sair?";
             const string caption = "Fechar";
@@ -76,6 +76,14 @@ namespace LetsMovie.FormsMenu
             this.Visible = false;
             frmDeletar deletar = new frmDeletar();
             deletar.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnTopFilmes_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmRanking ranking = new frmRanking();
+            ranking.ShowDialog();
             this.Visible = true;
         }
     }

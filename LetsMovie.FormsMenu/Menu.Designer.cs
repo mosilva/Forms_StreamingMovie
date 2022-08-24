@@ -49,6 +49,7 @@
             this.btnTopFilmes.TabIndex = 0;
             this.btnTopFilmes.Text = "Top Filmes";
             this.btnTopFilmes.UseVisualStyleBackColor = true;
+            this.btnTopFilmes.Click += new System.EventHandler(this.btnTopFilmes_Click);
             // 
             // btnSobre
             // 
