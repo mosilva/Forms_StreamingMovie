@@ -23,7 +23,7 @@ namespace LetsMovie.FormsDomain
             new Movies(10, "Diário de uma paixão", EnumGender.Romance, "2004-08-13"),
             new Movies(11, "O Exorcista", EnumGender.Horror, "1974-06-29")
         };
-        public static Stack<Movies> StackReleasesAddMovies = new Stack<Movies>(ListCatalogMovies);
+      //  public static Stack<Movies> StackReleasesAddMovies = new Stack<Movies>(ListCatalogMovies);
 
         public static Queue<Movies> QueueTopFivesDateOfReleasedMovies = new Queue<Movies>(
             ListCatalogMovies
@@ -54,7 +54,7 @@ namespace LetsMovie.FormsDomain
                 {EnumGender.Horror, ListCatalogMovies.Where(p => p.Gender == EnumGender.Horror).ToList()},
             };
 
-            StackReleasesAddMovies = new Stack<Movies>(ListCatalogMovies);
+            //StackReleasesAddMovies = new Stack<Movies>(ListCatalogMovies);
 
             QueueTopFivesDateOfReleasedMovies = new Queue<Movies>(
                 ListCatalogMovies

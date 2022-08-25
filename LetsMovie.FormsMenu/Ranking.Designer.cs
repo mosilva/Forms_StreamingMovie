@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRanking));
             this.picRanking = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblTop = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picRanking)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +57,46 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // lblTop
+            // 
+            this.lblTop.AutoSize = true;
+            this.lblTop.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTop.Location = new System.Drawing.Point(230, 207);
+            this.lblTop.Name = "lblTop";
+            this.lblTop.Size = new System.Drawing.Size(192, 50);
+            this.lblTop.TabIndex = 18;
+            this.lblTop.Text = "TOP 5\r\nÚltimos adicionados";
+            this.lblTop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(244, 289);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(165, 94);
+            this.listBox1.TabIndex = 19;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // btnList
+            // 
+            this.btnList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnList.Location = new System.Drawing.Point(257, 260);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(127, 23);
+            this.btnList.TabIndex = 21;
+            this.btnList.Text = "Aparecer Lista";
+            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            // 
             // frmRanking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 450);
+            this.Controls.Add(this.btnList);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lblTop);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.picRanking);
             this.Name = "frmRanking";
@@ -67,6 +105,7 @@
             this.Load += new System.EventHandler(this.frmRanking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picRanking)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -74,5 +113,8 @@
 
         private PictureBox picRanking;
         private Button btnVoltar;
+        private Label lblTop;
+        private ListBox listBox1;
+        private Button btnList;
     }
 }
