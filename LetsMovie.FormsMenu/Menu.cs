@@ -86,5 +86,10 @@ namespace LetsMovie.FormsMenu
             ranking.ShowDialog();
             this.Visible = true;
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,10 +35,10 @@
             this.txtTitulo = new System.Windows.Forms.Label();
             this.BtnSearchAdventure = new System.Windows.Forms.Button();
             this.BtnSearchHeroes = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnSearchComedy = new System.Windows.Forms.Button();
+            this.BtnSearchRomanticComedy = new System.Windows.Forms.Button();
+            this.BtnSearchHorror = new System.Windows.Forms.Button();
+            this.BtnSearchRomance = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,45 +114,49 @@
             this.BtnSearchHeroes.UseVisualStyleBackColor = true;
             this.BtnSearchHeroes.Click += new System.EventHandler(this.BtnSearchHeroes_Click);
             // 
-            // button4
+            // BtnSearchComedy
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(304, 61);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Ação";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnSearchComedy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnSearchComedy.Location = new System.Drawing.Point(304, 61);
+            this.BtnSearchComedy.Name = "BtnSearchComedy";
+            this.BtnSearchComedy.Size = new System.Drawing.Size(110, 23);
+            this.BtnSearchComedy.TabIndex = 4;
+            this.BtnSearchComedy.Text = "Comédia";
+            this.BtnSearchComedy.UseVisualStyleBackColor = true;
+            this.BtnSearchComedy.Click += new System.EventHandler(this.BtnSearchComedy_Click);
             // 
-            // button5
+            // BtnSearchRomanticComedy
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(430, 61);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Ação";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnSearchRomanticComedy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnSearchRomanticComedy.Location = new System.Drawing.Point(400, 108);
+            this.BtnSearchRomanticComedy.Name = "BtnSearchRomanticComedy";
+            this.BtnSearchRomanticComedy.Size = new System.Drawing.Size(161, 23);
+            this.BtnSearchRomanticComedy.TabIndex = 4;
+            this.BtnSearchRomanticComedy.Text = "Comédia Romântica";
+            this.BtnSearchRomanticComedy.UseVisualStyleBackColor = true;
+            this.BtnSearchRomanticComedy.Click += new System.EventHandler(this.BtnSearchRomanticComedy_Click);
             // 
-            // button6
+            // BtnSearchHorror
             // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(556, 61);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(110, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Ação";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnSearchHorror.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnSearchHorror.Location = new System.Drawing.Point(556, 61);
+            this.BtnSearchHorror.Name = "BtnSearchHorror";
+            this.BtnSearchHorror.Size = new System.Drawing.Size(110, 23);
+            this.BtnSearchHorror.TabIndex = 4;
+            this.BtnSearchHorror.Text = "Terror";
+            this.BtnSearchHorror.UseVisualStyleBackColor = true;
+            this.BtnSearchHorror.Click += new System.EventHandler(this.BtnSearchHorror_Click);
             // 
-            // button7
+            // BtnSearchRomance
             // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(430, 104);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(110, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Ação";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnSearchRomance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnSearchRomance.Location = new System.Drawing.Point(430, 61);
+            this.BtnSearchRomance.Name = "BtnSearchRomance";
+            this.BtnSearchRomance.Size = new System.Drawing.Size(110, 23);
+            this.BtnSearchRomance.TabIndex = 4;
+            this.BtnSearchRomance.Text = "Romance";
+            this.BtnSearchRomance.UseVisualStyleBackColor = true;
+            this.BtnSearchRomance.Click += new System.EventHandler(this.BtnSearchRomance_Click);
             // 
             // frmBuscar
             // 
@@ -162,17 +166,18 @@
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.BtnSearchHorror);
+            this.Controls.Add(this.BtnSearchRomanticComedy);
             this.Controls.Add(this.BtnSearchHeroes);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.BtnSearchRomance);
+            this.Controls.Add(this.BtnSearchComedy);
             this.Controls.Add(this.BtnSearchAdventure);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSobre);
             this.Name = "frmBuscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar";
+            this.Load += new System.EventHandler(this.frmBuscar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -188,9 +193,9 @@
         private Label txtTitulo;
         private Button BtnSearchAdventure;
         private Button BtnSearchHeroes;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button BtnSearchComedy;
+        private Button BtnSearchRomanticComedy;
+        private Button BtnSearchHorror;
+        private Button BtnSearchRomance;
     }
 }

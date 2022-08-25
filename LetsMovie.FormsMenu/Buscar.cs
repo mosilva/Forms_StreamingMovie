@@ -14,77 +14,98 @@ namespace LetsMovie.FormsMenu
 {
     public partial class frmBuscar : Form
     {
+        ListBox listaFilmes = new ListBox();
         public frmBuscar()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void ShowMovies(List<Movies> listMovies)
         {
-            ListBox listaFilmes = new ListBox();
-            listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 160);
-
-            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Action, out List<Movies>? ListAction);
-
-            foreach (var movie in ListAction)
+            foreach (var movie in listMovies)
             {
                 listaFilmes.Items.Add(movie.Title.ToString());
             }
-
-            this.Controls.Add(listaFilmes);
 
             for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
             {
                 Debug.WriteLine(i);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listaFilmes.Items.Clear();
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Action, out List<Movies>? ListAction);
+
+            ShowMovies(ListAction);
+
         }
 
         private void BtnSearchAdventure_Click(object sender, EventArgs e)
         {
 
-            ListBox listaFilmes = new ListBox();
-            listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 160);
+            listaFilmes.Items.Clear();
 
             MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Adventure, out List<Movies>? ListAdventure);
-           
-            foreach (var movie in ListAdventure)
-            {
-                listaFilmes.Items.Add(movie.Title.ToString());
-            }
 
-            this.Controls.Add(listaFilmes);
-
-            for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
-            {
-                Debug.WriteLine(i);
-            }
-
+            ShowMovies(ListAdventure);
 
         }
 
         private void BtnSearchHeroes_Click(object sender, EventArgs e)
         {
-
-            ListBox listaFilmes = new ListBox();
-            listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 160);
+            listaFilmes.Items.Clear();
 
             MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Heroes, out List<Movies>? ListHeroes);
 
-            foreach (var movie in ListHeroes)
-            {
-                listaFilmes.Items.Add(movie.Title.ToString());
-            }
+            ShowMovies(ListHeroes);
+        }
 
+        private void BtnSearchComedy_Click(object sender, EventArgs e)
+        {
+            listaFilmes.Items.Clear();
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Comedy, out List<Movies>? ListComedy);
+            
+            ShowMovies(ListComedy);
+        }
+
+        private void BtnSearchRomanticComedy_Click(object sender, EventArgs e)
+        {
+            listaFilmes.Items.Clear();
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Romantic_Comedy, out List<Movies>? ListRomanticRomantic);
+            
+            ShowMovies(ListRomanticRomantic);
+        }
+
+        private void BtnSearchRomance_Click(object sender, EventArgs e)
+        {
+            listaFilmes.Items.Clear();
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Romance, out List<Movies>? ListRomance);
+            
+            ShowMovies(ListRomance);
+
+        }
+
+        private void BtnSearchHorror_Click(object sender, EventArgs e)
+        {
+            listaFilmes.Items.Clear();
+
+            MovieCollections.DictionaryGenderMovies.TryGetValue(EnumGender.Horror, out List<Movies>? ListHorror);
+            
+            ShowMovies(ListHorror);
+        }
+
+        private void frmBuscar_Load(object sender, EventArgs e)
+        {
             this.Controls.Add(listaFilmes);
-
-            for (int i = 0; i < MovieCollections.ListCatalogMovies.Count; i++)
-            {
-                Debug.WriteLine(i);
-            }
-
+            listaFilmes.Size = new System.Drawing.Size(250, 200);
+            listaFilmes.Location = new System.Drawing.Point(340, 160);
         }
     }
 }
