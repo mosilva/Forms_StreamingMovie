@@ -77,5 +77,10 @@ namespace LetsMovie.FormsMenu
                 Debug.WriteLine(i);
             }
         }
+
+        private void txbNovoTitulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

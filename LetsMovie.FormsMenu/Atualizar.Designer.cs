@@ -49,7 +49,6 @@
             this.picFilmes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFilmes.TabIndex = 12;
             this.picFilmes.TabStop = false;
-
             // 
             // btnVoltar
             // 
@@ -120,6 +119,7 @@
             this.txbNovoTitulo.PlaceholderText = "Digite o novo titulo";
             this.txbNovoTitulo.Size = new System.Drawing.Size(236, 23);
             this.txbNovoTitulo.TabIndex = 22;
+            this.txbNovoTitulo.TextChanged += new System.EventHandler(this.txbNovoTitulo_TextChanged);
             // 
             // frmAtualizar
             // 
