@@ -41,5 +41,26 @@ namespace LetsMovie.FormsDomain
             {EnumGender.Horror, ListCatalogMovies.Where(p => p.Gender == EnumGender.Horror).ToList()},
         };
 
+        public static void AtualizaCollections()
+        {
+            DictionaryGenderMovies = new Dictionary<EnumGender, List<Movies>>()
+            {
+                {EnumGender.Action, ListCatalogMovies.Where(p => p.Gender == EnumGender.Action).ToList()},
+                {EnumGender.Adventure, ListCatalogMovies.Where(p => p.Gender == EnumGender.Adventure).ToList()},
+                {EnumGender.Heroes, ListCatalogMovies.Where(p => p.Gender == EnumGender.Heroes).ToList()},
+                {EnumGender.Comedy, ListCatalogMovies.Where(p => p.Gender == EnumGender.Comedy).ToList()},
+                {EnumGender.Romantic_Comedy, ListCatalogMovies.Where(p => p.Gender == EnumGender.Romantic_Comedy).ToList()},
+                {EnumGender.Romance, ListCatalogMovies.Where(p => p.Gender == EnumGender.Romance).ToList()},
+                {EnumGender.Horror, ListCatalogMovies.Where(p => p.Gender == EnumGender.Horror).ToList()},
+            };
+
+            StackReleasesAddMovies = new Stack<Movies>(ListCatalogMovies);
+
+            QueueTopFivesDateOfReleasedMovies = new Queue<Movies>(
+                ListCatalogMovies
+                .OrderBy(p => p.DateOfReleased)
+                .Take(5));
+    }
+
     }
 }

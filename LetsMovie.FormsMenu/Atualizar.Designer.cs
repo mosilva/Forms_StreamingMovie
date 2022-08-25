@@ -35,6 +35,8 @@
             this.txtTitulo = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.lblNovoTitulo = new System.Windows.Forms.Label();
+            this.txbNovoTitulo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFilmes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +49,7 @@
             this.picFilmes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFilmes.TabIndex = 12;
             this.picFilmes.TabStop = false;
+            this.picFilmes.Click += new System.EventHandler(this.picFilmes_Click);
             // 
             // btnVoltar
             // 
@@ -92,18 +95,39 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(450, 359);
+            this.btnAtualizar.Location = new System.Drawing.Point(452, 402);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 20;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // lblNovoTitulo
+            // 
+            this.lblNovoTitulo.AutoSize = true;
+            this.lblNovoTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNovoTitulo.Location = new System.Drawing.Point(406, 349);
+            this.lblNovoTitulo.Name = "lblNovoTitulo";
+            this.lblNovoTitulo.Size = new System.Drawing.Size(177, 21);
+            this.lblNovoTitulo.TabIndex = 21;
+            this.lblNovoTitulo.Text = "Novo Titulo Do Filme:";
+            // 
+            // txbNovoTitulo
+            // 
+            this.txbNovoTitulo.Location = new System.Drawing.Point(379, 373);
+            this.txbNovoTitulo.Name = "txbNovoTitulo";
+            this.txbNovoTitulo.PlaceholderText = "Digite o novo titulo";
+            this.txbNovoTitulo.Size = new System.Drawing.Size(236, 23);
+            this.txbNovoTitulo.TabIndex = 22;
             // 
             // frmAtualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 450);
+            this.Controls.Add(this.txbNovoTitulo);
+            this.Controls.Add(this.lblNovoTitulo);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.picFilmes);
@@ -128,5 +152,7 @@
         private Label txtTitulo;
         private Button btnList;
         private Button btnAtualizar;
+        private Label lblNovoTitulo;
+        private TextBox txbNovoTitulo;
     }
 }

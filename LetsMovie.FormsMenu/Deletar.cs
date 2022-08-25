@@ -54,28 +54,9 @@ namespace LetsMovie.FormsMenu
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            string filme = System.Convert.ToString(this.listaFilmes.SelectedItem);
-            DeletarFilme(filme);
+            string filme = Convert.ToString(this.listaFilmes.SelectedItem);
+            DeletarDaLista(filme);
 
-        }
-
-        private void DeletarFilme(string filme)
-        {
-            List<Movies> filmesDeletar = MovieCollections.ListCatalogMovies.Where(p => p.Title == filme).ToList();
-            if(filmesDeletar.Any())
-            {
-               
-                var listaFilmes = MovieCollections.ListCatalogMovies;
-
-                var filmeDeletar = listaFilmes.Where(p => p.Title == filme).ToList();
-
-                foreach (var titulo in filmeDeletar)
-                {
-                    listaFilmes.Remove(titulo);
-                }
-
-            }
-            CarregarFilmes();
         }
 
         private void CarregarFilmes()
@@ -97,6 +78,14 @@ namespace LetsMovie.FormsMenu
             }
         }
 
+        private void DeletarDaLista(string filme)
+        {
+            
+            Movies filmesDeletar = MovieCollections.ListCatalogMovies.Find(p => p.Title == filme);
+            MovieCollections.ListCatalogMovies.Remove(filmesDeletar);
+            MovieCollections.AtualizaCollections();
+            CarregarFilmes();
+        }
 
     }
 }

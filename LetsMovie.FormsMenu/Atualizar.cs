@@ -45,7 +45,7 @@ namespace LetsMovie.FormsMenu
 
             ListBox listaFilmes = new ListBox();
             listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 160);
+            listaFilmes.Location = new System.Drawing.Point(340, 145);
 
             foreach (var movie in MovieCollections.ListCatalogMovies)
             {
@@ -58,6 +58,16 @@ namespace LetsMovie.FormsMenu
             {
                 Debug.WriteLine(i);
             }
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picFilmes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
