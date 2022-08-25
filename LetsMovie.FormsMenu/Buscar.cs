@@ -21,7 +21,7 @@ namespace LetsMovie.FormsMenu
         }
 
 
-        private void ShowMovies(List<Movies> listMovies)
+        public void ShowMovies(List<Movies> listMovies)
         {
             foreach (var movie in listMovies)
             {

@@ -49,7 +49,7 @@
             this.picFilmes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFilmes.TabIndex = 12;
             this.picFilmes.TabStop = false;
-            this.picFilmes.Click += new System.EventHandler(this.picFilmes_Click);
+
             // 
             // btnVoltar
             // 
