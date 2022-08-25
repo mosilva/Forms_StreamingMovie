@@ -107,5 +107,21 @@ namespace LetsMovie.FormsMenu
             listaFilmes.Size = new System.Drawing.Size(250, 200);
             listaFilmes.Location = new System.Drawing.Point(340, 160);
         }
+
+        private void btnSobre_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmSobre sobre = new frmSobre();
+            sobre.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmMenu telaInicial = new frmMenu();
+            telaInicial.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

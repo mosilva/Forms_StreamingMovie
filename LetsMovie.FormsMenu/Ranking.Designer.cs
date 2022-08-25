@@ -64,6 +64,7 @@
             this.Name = "frmRanking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ranking";
+            this.Load += new System.EventHandler(this.frmRanking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picRanking)).EndInit();
             this.ResumeLayout(false);
 

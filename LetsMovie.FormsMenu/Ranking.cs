@@ -24,5 +24,10 @@ namespace LetsMovie.FormsMenu
             telaInicial.ShowDialog();
             this.Visible = true;
         }
+
+        private void frmRanking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

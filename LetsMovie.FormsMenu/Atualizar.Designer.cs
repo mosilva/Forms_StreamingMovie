@@ -34,6 +34,7 @@
             this.btnSobre = new System.Windows.Forms.Button();
             this.txtTitulo = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picFilmes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +90,21 @@
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(450, 359);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizar.TabIndex = 20;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            // 
             // frmAtualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 450);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.picFilmes);
             this.Controls.Add(this.btnVoltar);
@@ -116,5 +127,6 @@
         private Button btnSobre;
         private Label txtTitulo;
         private Button btnList;
+        private Button btnAtualizar;
     }
 }

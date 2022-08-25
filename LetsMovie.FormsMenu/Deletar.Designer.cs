@@ -34,6 +34,7 @@
             this.btnSobre = new System.Windows.Forms.Button();
             this.txtTitulo = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picFilmes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +90,22 @@
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(441, 369);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletar.TabIndex = 19;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
             // frmDeletar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 450);
+            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.picFilmes);
             this.Controls.Add(this.btnVoltar);
@@ -116,5 +128,6 @@
         private Button btnSobre;
         private Label txtTitulo;
         private Button btnList;
+        private Button btnDeletar;
     }
 }

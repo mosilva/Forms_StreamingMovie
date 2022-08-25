@@ -64,5 +64,10 @@ namespace LetsMovie.FormsMenu
             }
 
         }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
