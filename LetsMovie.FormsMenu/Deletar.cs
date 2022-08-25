@@ -14,6 +14,7 @@ namespace LetsMovie.FormsMenu
 {
     public partial class frmDeletar : Form
     {
+        private ListBox listaFilmes = new ListBox();
         public frmDeletar()
         {
             InitializeComponent();
@@ -47,11 +48,43 @@ namespace LetsMovie.FormsMenu
 
         private void btnList_Click(object sender, EventArgs e)
         {
-            ListBox listaFilmes = new ListBox();
+            CarregarFilmes();
+
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            string filme = System.Convert.ToString(this.listaFilmes.SelectedItem);
+            DeletarFilme(filme);
+
+        }
+
+        private void DeletarFilme(string filme)
+        {
+            List<Movies> filmesDeletar = MovieCollections.ListCatalogMovies.Where(p => p.Title == filme).ToList();
+            if(filmesDeletar.Any())
+            {
+               
+                var listaFilmes = MovieCollections.ListCatalogMovies;
+
+                var filmeDeletar = listaFilmes.Where(p => p.Title == filme).ToList();
+
+                foreach (var titulo in filmeDeletar)
+                {
+                    listaFilmes.Remove(titulo);
+                }
+
+            }
+            CarregarFilmes();
+        }
+
+        private void CarregarFilmes()
+        {
+            listaFilmes.Items.Clear();
             listaFilmes.Size = new System.Drawing.Size(250, 200);
             listaFilmes.Location = new System.Drawing.Point(340, 160);
 
-            foreach (var movie in MovieCollections.ListCatalogMovies) 
+            foreach (var movie in MovieCollections.ListCatalogMovies)
             {
                 listaFilmes.Items.Add(movie.Title.ToString());
             }
@@ -62,12 +95,8 @@ namespace LetsMovie.FormsMenu
             {
                 Debug.WriteLine(i);
             }
-
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
