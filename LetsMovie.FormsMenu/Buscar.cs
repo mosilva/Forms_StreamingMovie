@@ -105,7 +105,7 @@ namespace LetsMovie.FormsMenu
         {
             this.Controls.Add(listaFilmes);
             listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 160);
+            listaFilmes.Location = new System.Drawing.Point(380, 160);
         }
 
         private void btnSobre_Click(object sender, EventArgs e)

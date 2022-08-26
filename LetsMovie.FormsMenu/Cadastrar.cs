@@ -9,7 +9,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace LetsMovie.FormsMenu
 {
     public partial class frmCadastrar : Form
@@ -29,17 +28,15 @@ namespace LetsMovie.FormsMenu
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             frmMenu telaInicial = new frmMenu();
             telaInicial.ShowDialog();
-            this.Visible = true;
+
         }
 
         private void frmCadastrar_Load(object sender, EventArgs e)
         {
             cmbBoxGenero.DataSource = Enum.GetValues(typeof(EnumGender));
-
-            //this.cmbBoxGenero.DataSource = Utility.EnumToList<EnumGender>();
         }
 
         private void txtTituloFilme_TextChanged(object sender, EventArgs e)
@@ -93,11 +90,6 @@ namespace LetsMovie.FormsMenu
         private void cmbBoxGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
             EnumGender filmeGenero = (EnumGender)cmbBoxGenero.SelectedItem;
-        }
-
-        private void lblDateOfRelease_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ClearInputs()

@@ -37,15 +37,10 @@ namespace LetsMovie.FormsMenu
             this.Visible = true;
         }
 
-        private void frmAtualizar_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnList_Click(object sender, EventArgs e)
         {
-            listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 145);
+            listaFilmes.Size = new System.Drawing.Size(250, 180);
+            listaFilmes.Location = new System.Drawing.Point(380, 145);
             ShowMovies();
 
         }
@@ -78,7 +73,7 @@ namespace LetsMovie.FormsMenu
             }
         }
 
-        private void txbNovoTitulo_TextChanged(object sender, EventArgs e)
+        private void frmAtualizar_Load(object sender, EventArgs e)
         {
 
         }

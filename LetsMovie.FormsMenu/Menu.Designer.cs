@@ -68,7 +68,7 @@ namespace LetsMovie.FormsMenu
             // btnTopFilmes
             // 
             this.btnTopFilmes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTopFilmes.Location = new System.Drawing.Point(59, 36);
+            this.btnTopFilmes.Location = new System.Drawing.Point(33, 36);
             this.btnTopFilmes.Name = "btnTopFilmes";
             this.btnTopFilmes.Size = new System.Drawing.Size(75, 23);
             this.btnTopFilmes.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace LetsMovie.FormsMenu
             // btnSobre
             // 
             this.btnSobre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSobre.Location = new System.Drawing.Point(301, 36);
+            this.btnSobre.Location = new System.Drawing.Point(305, 36);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(75, 23);
             this.btnSobre.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace LetsMovie.FormsMenu
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSair.Location = new System.Drawing.Point(577, 36);
+            this.btnSair.Location = new System.Drawing.Point(545, 36);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 2;
@@ -101,7 +101,7 @@ namespace LetsMovie.FormsMenu
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadastrar.Location = new System.Drawing.Point(59, 128);
+            this.btnCadastrar.Location = new System.Drawing.Point(33, 110);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace LetsMovie.FormsMenu
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBuscar.Location = new System.Drawing.Point(59, 189);
+            this.btnBuscar.Location = new System.Drawing.Point(33, 182);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 4;
@@ -123,7 +123,7 @@ namespace LetsMovie.FormsMenu
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAtualizar.Location = new System.Drawing.Point(59, 252);
+            this.btnAtualizar.Location = new System.Drawing.Point(33, 258);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 5;
@@ -134,7 +134,7 @@ namespace LetsMovie.FormsMenu
             // btnDeletar
             // 
             this.btnDeletar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeletar.Location = new System.Drawing.Point(59, 315);
+            this.btnDeletar.Location = new System.Drawing.Point(33, 332);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(75, 23);
             this.btnDeletar.TabIndex = 6;
@@ -144,10 +144,12 @@ namespace LetsMovie.FormsMenu
             // 
             // picLogo
             // 
+            this.picLogo.BackColor = System.Drawing.Color.Black;
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(184, 78);
+            this.picLogo.Location = new System.Drawing.Point(136, 75);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(493, 345);
+            this.picLogo.Size = new System.Drawing.Size(495, 313);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLogo.TabIndex = 7;
             this.picLogo.TabStop = false;
             // 
@@ -155,19 +157,20 @@ namespace LetsMovie.FormsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(681, 400);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnTopFilmes);
+            this.Controls.Add(this.btnSobre);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnSobre);
-            this.Controls.Add(this.btnTopFilmes);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela inicial";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 

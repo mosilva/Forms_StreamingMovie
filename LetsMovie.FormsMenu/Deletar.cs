@@ -63,7 +63,7 @@ namespace LetsMovie.FormsMenu
         {
             listaFilmes.Items.Clear();
             listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(340, 160);
+            listaFilmes.Location = new System.Drawing.Point(380, 160);
 
             foreach (var movie in MovieCollections.ListCatalogMovies)
             {
