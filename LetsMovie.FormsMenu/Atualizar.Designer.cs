@@ -37,6 +37,7 @@
             this.lblNovoTitulo = new System.Windows.Forms.Label();
             this.txbNovoTitulo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblAparecer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picFilmes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +123,15 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // lblAparecer
+            // 
+            this.lblAparecer.AutoSize = true;
+            this.lblAparecer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAparecer.Location = new System.Drawing.Point(429, 226);
+            this.lblAparecer.Name = "lblAparecer";
+            this.lblAparecer.Size = new System.Drawing.Size(0, 21);
+            this.lblAparecer.TabIndex = 24;
+            // 
             // frmAtualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -129,6 +139,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAparecer);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txbNovoTitulo);
             this.Controls.Add(this.lblNovoTitulo);
@@ -158,5 +169,6 @@
         private Label lblNovoTitulo;
         private TextBox txbNovoTitulo;
         private PictureBox pictureBox1;
+        private Label lblAparecer;
     }
 }

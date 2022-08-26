@@ -37,12 +37,21 @@ namespace LetsMovie.FormsMenu
             this.Visible = true;
         }
 
-        private void btnList_Click(object sender, EventArgs e)
+        private async void btnList_Click(object sender, EventArgs e)
         {
             listaFilmes.Size = new System.Drawing.Size(250, 180);
             listaFilmes.Location = new System.Drawing.Point(380, 145);
-            ShowMovies();
+            listaFilmes.Items.Clear();
 
+            btnList.Enabled = false;
+            lblAparecer.ForeColor = Color.DarkSeaGreen;
+            lblAparecer.Text = "Carregando Lista...";
+
+            await Task.Delay(4000);
+            lblAparecer.Text = "";
+            btnList.Enabled = true;
+
+            ShowMovies();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
