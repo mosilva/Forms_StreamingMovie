@@ -74,18 +74,19 @@ namespace LetsMovie.FormsMenu
                 {
                     MessageBox.Show("Data incorreta. Digite no formato AAAA-MM-DD");
                 }
+                else
+                {
+                    int numId = MovieCollections.ListCatalogMovies.Count + 1;
+
+                    Movies newMovie = new Movies(numId, txtTituloFilme.Text, (EnumGender)cmbBoxGenero.SelectedItem, txtDate.Text);
+                    MovieCollections.ListCatalogMovies.Add(newMovie);
+
+                    MovieCollections.AtualizaCollections();
+                    MessageBox.Show("Filme adicionado com sucesso");
+                    ClearInputs();
+                }
 
             }
-
-            int numId = MovieCollections.ListCatalogMovies.Count + 1;
-
-            Movies newMovie = new Movies(numId, txtTituloFilme.Text, (EnumGender)cmbBoxGenero.SelectedItem, txtDate.Text);
-            MovieCollections.ListCatalogMovies.Add(newMovie);
-
-            MovieCollections.AtualizaCollections();
-
-            MessageBox.Show("Filme adicionado com sucesso");
-            ClearInputs();
             
         }
 
