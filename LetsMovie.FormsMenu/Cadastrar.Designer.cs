@@ -40,6 +40,7 @@
             this.txtDate = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblCarregando = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picFilmes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +81,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(391, 135);
+            this.lblTitulo.Location = new System.Drawing.Point(394, 73);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(124, 21);
             this.lblTitulo.TabIndex = 5;
@@ -89,7 +90,7 @@
             // txtTituloFilme
             // 
             this.txtTituloFilme.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTituloFilme.Location = new System.Drawing.Point(391, 172);
+            this.txtTituloFilme.Location = new System.Drawing.Point(394, 110);
             this.txtTituloFilme.Name = "txtTituloFilme";
             this.txtTituloFilme.Size = new System.Drawing.Size(253, 29);
             this.txtTituloFilme.TabIndex = 6;
@@ -100,7 +101,7 @@
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblGenero.ForeColor = System.Drawing.Color.White;
-            this.lblGenero.Location = new System.Drawing.Point(391, 213);
+            this.lblGenero.Location = new System.Drawing.Point(394, 151);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(167, 23);
             this.lblGenero.TabIndex = 7;
@@ -110,7 +111,7 @@
             // 
             this.cmbBoxGenero.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbBoxGenero.FormattingEnabled = true;
-            this.cmbBoxGenero.Location = new System.Drawing.Point(391, 250);
+            this.cmbBoxGenero.Location = new System.Drawing.Point(394, 188);
             this.cmbBoxGenero.Name = "cmbBoxGenero";
             this.cmbBoxGenero.Size = new System.Drawing.Size(253, 29);
             this.cmbBoxGenero.TabIndex = 8;
@@ -121,7 +122,7 @@
             this.lblDateOfRelease.AutoSize = true;
             this.lblDateOfRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDateOfRelease.ForeColor = System.Drawing.Color.White;
-            this.lblDateOfRelease.Location = new System.Drawing.Point(391, 294);
+            this.lblDateOfRelease.Location = new System.Drawing.Point(394, 232);
             this.lblDateOfRelease.Name = "lblDateOfRelease";
             this.lblDateOfRelease.Size = new System.Drawing.Size(231, 42);
             this.lblDateOfRelease.TabIndex = 9;
@@ -130,7 +131,7 @@
             // txtDate
             // 
             this.txtDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDate.Location = new System.Drawing.Point(391, 350);
+            this.txtDate.Location = new System.Drawing.Point(394, 288);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(253, 29);
             this.txtDate.TabIndex = 10;
@@ -138,7 +139,8 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(412, 405);
+            this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastrar.Location = new System.Drawing.Point(415, 343);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(210, 23);
             this.btnCadastrar.TabIndex = 11;
@@ -156,6 +158,17 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
+            // lblCarregando
+            // 
+            this.lblCarregando.AutoSize = true;
+            this.lblCarregando.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCarregando.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCarregando.Location = new System.Drawing.Point(415, 383);
+            this.lblCarregando.Name = "lblCarregando";
+            this.lblCarregando.Size = new System.Drawing.Size(0, 21);
+            this.lblCarregando.TabIndex = 14;
+            this.lblCarregando.Click += new System.EventHandler(this.lblCarregando_Click);
+            // 
             // frmCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -163,6 +176,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.lblCarregando);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtDate);
@@ -198,5 +212,6 @@
         private TextBox txtDate;
         private Button btnCadastrar;
         private PictureBox pictureBox2;
+        private Label lblCarregando;
     }
 }

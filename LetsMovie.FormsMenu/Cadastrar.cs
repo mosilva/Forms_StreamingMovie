@@ -59,8 +59,9 @@ namespace LetsMovie.FormsMenu
             
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private async void btnCadastrar_Click(object sender, EventArgs e)
         {
+
             string dataLancamento = txtDate.Text;
             if (!string.IsNullOrEmpty(dataLancamento))
             {
@@ -73,13 +74,25 @@ namespace LetsMovie.FormsMenu
                 }
                 else
                 {
+
                     int numId = MovieCollections.ListCatalogMovies.Count + 1;
 
                     Movies newMovie = new Movies(numId, txtTituloFilme.Text, (EnumGender)cmbBoxGenero.SelectedItem, txtDate.Text);
                     MovieCollections.ListCatalogMovies.Add(newMovie);
 
+                    btnCadastrar.Enabled = false;
+                    lblCarregando.ForeColor = Color.White;
+                    lblCarregando.Text = "Adicionando...";
+
+                    await Task.Delay(4000);
+
+                    btnCadastrar.Enabled = true;
+                    lblCarregando.BackColor = Color.White;
+                    lblCarregando.ForeColor = Color.Green;
+                    lblCarregando.Text = "Adicionado Com Sucesso!!!";
+
                     MovieCollections.AtualizaCollections();
-                    MessageBox.Show("Filme adicionado com sucesso");
+                    MessageBox.Show($"{txtTituloFilme.Text} adicionado com sucesso");
                     ClearInputs();
                 }
 
@@ -96,6 +109,11 @@ namespace LetsMovie.FormsMenu
         {
             txtTituloFilme.Clear();
             txtDate.Clear();
+        }
+
+        private void lblCarregando_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
