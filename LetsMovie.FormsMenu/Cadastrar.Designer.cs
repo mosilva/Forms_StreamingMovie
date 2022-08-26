@@ -50,7 +50,7 @@
             this.txtTitulo.AutoSize = true;
             this.txtTitulo.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTitulo.ForeColor = System.Drawing.Color.White;
-            this.txtTitulo.Location = new System.Drawing.Point(128, 90);
+            this.txtTitulo.Location = new System.Drawing.Point(128, 46);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(157, 24);
             this.txtTitulo.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(104, 405);
+            this.btnVoltar.Location = new System.Drawing.Point(103, 343);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 3;
@@ -69,7 +69,7 @@
             // picFilmes
             // 
             this.picFilmes.Image = ((System.Drawing.Image)(resources.GetObject("picFilmes.Image")));
-            this.picFilmes.Location = new System.Drawing.Point(39, 159);
+            this.picFilmes.Location = new System.Drawing.Point(39, 115);
             this.picFilmes.Name = "picFilmes";
             this.picFilmes.Size = new System.Drawing.Size(307, 196);
             this.picFilmes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LetsMovie.FormsMenu.Properties.Resources.edit;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 63);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(89, 63);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

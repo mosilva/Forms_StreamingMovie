@@ -46,16 +46,26 @@ namespace LetsMovie.FormsMenu
 
         }
 
-        private void btnList_Click(object sender, EventArgs e)
+        private async void btnList_Click(object sender, EventArgs e)
         {
             CarregarFilmes();
 
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
+        private async void btnDeletar_Click(object sender, EventArgs e)
         {
             string filme = Convert.ToString(this.listaFilmes.SelectedItem);
-            DeletarDaLista(filme);
+            
+            btnDeletar.Enabled = false;
+            lblDeletar.ForeColor = Color.White;
+            lblDeletar.Text = "Deletando...";
+
+            await Task.WhenAll(DeletarDaLista(filme));
+
+            btnDeletar.Enabled = true;
+            lblDeletar.BackColor = Color.White;
+            lblDeletar.ForeColor = Color.Green;
+            lblDeletar.Text = "Deletado Com Sucesso!!!";
 
         }
 
@@ -63,7 +73,7 @@ namespace LetsMovie.FormsMenu
         {
             listaFilmes.Items.Clear();
             listaFilmes.Size = new System.Drawing.Size(250, 200);
-            listaFilmes.Location = new System.Drawing.Point(380, 160);
+            listaFilmes.Location = new System.Drawing.Point(380, 130);
 
             foreach (var movie in MovieCollections.ListCatalogMovies)
             {
@@ -78,14 +88,16 @@ namespace LetsMovie.FormsMenu
             }
         }
 
-        private void DeletarDaLista(string filme)
+        private async Task DeletarDaLista(string filme)
         {
             
             Movies filmesDeletar = MovieCollections.ListCatalogMovies.Find(p => p.Title == filme);
             MovieCollections.ListCatalogMovies.Remove(filmesDeletar);
+
+            await Task.Delay(4000);
+
             MovieCollections.AtualizaCollections();
             CarregarFilmes();
         }
-
     }
 }

@@ -56,10 +56,14 @@ namespace LetsMovie.FormsMenu
         {
 
             listaFilmes.Size = new System.Drawing.Size(140, 100);
-            listaFilmes.Location = new System.Drawing.Point(270, 300);
+            listaFilmes.Location = new System.Drawing.Point(270, 270);
             ShowMoviesRanking();
 
         }
 
+        private void frmRanking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

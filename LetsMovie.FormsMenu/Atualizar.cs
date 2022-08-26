@@ -58,7 +58,7 @@ namespace LetsMovie.FormsMenu
         {
             string filme = Convert.ToString(this.listaFilmes.SelectedItem);
             string novoTitulo = txbNovoTitulo.Text;
-            MessageBox.Show($"novo {novoTitulo}");
+            MessageBox.Show($"Título atualizado. Novo Título: {novoTitulo}");
 
             if (!string.IsNullOrEmpty(novoTitulo))
             {
