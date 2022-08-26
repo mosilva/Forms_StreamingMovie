@@ -29,49 +29,37 @@ namespace LetsMovie.FormsMenu
             this.Visible = true;
         }
 
-        private void frmRanking_Load(object sender, EventArgs e)
+        public void ShowMoviesRanking()
         {
+            listaFilmes.Items.Clear();
 
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            var TopFives =
-             MovieCollections.ListCatalogMovies
-            .OrderBy(p => p.DateOfReleased)
-            .Take(5).ToList();
-
-            foreach (var movie in TopFives)
+            do
             {
-                listaFilmes.Items.Add(movie.Title.ToString());
-            }
+                listaFilmes.Items.Add(MovieCollections
+                    .QueueTopFivesDateOfReleasedMovies
+                    .Dequeue().Title.ToString());
+            } while (MovieCollections
+                    .QueueTopFivesDateOfReleasedMovies
+                    .Count != 0);
+
+            MovieCollections.AtualizaCollections();
 
             this.Controls.Add(listaFilmes);
 
-            for (int i = 0; i < TopFives.Count; i++)
+            for (int i = 0; i < MovieCollections.QueueTopFivesDateOfReleasedMovies.Count; i++)
             {
                 Debug.WriteLine(i);
             }
 
         }
-
         private void btnList_Click(object sender, EventArgs e)
         {
 
-            //var TopFives = new List<Movies>(
-            // MovieCollections.ListCatalogMovies
-            //.OrderBy(p => p.DateOfReleased)
-            //.Take(5).ToList());
+            listaFilmes.Size = new System.Drawing.Size(140, 100);
+            listaFilmes.Location = new System.Drawing.Point(270, 300);
+            ShowMoviesRanking();
 
-            //foreach (var movie in TopFives)
-            //{
-            //    Debug.WriteLine(movie);
-            //}
-
-
-            //listaFilmes.Size = new System.Drawing.Size(250, 200);
-            //listaFilmes.Location = new System.Drawing.Point(340, 145);
         }
+
     }
 }
